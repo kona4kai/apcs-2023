@@ -1,5 +1,3 @@
-package unit10;
-
 import java.util.ArrayList;
 
 public class Baum {
