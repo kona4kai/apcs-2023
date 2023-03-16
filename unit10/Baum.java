@@ -38,8 +38,26 @@ public class Baum {
         return root;
     }
 
+    static void printTree(Baum baum) {
+        System.out.println(baum.label);
+        for(Baum child : baum.getChildren()) {
+            System.out.print("");
+            printTree(child, 1);
+        }
+    }
+
+    static void printTree(Baum baum, int layer) {
+        for(int i = layer; i > 0; i--)
+            System.out.print("  ");
+        System.out.println(baum.label);
+        for(Baum child : baum.getChildren()) {
+            printTree(child, layer +1);
+        }
+    }
+
     public static void main(String[] args) {
         Baum fsTree = filesystemTree();
+        printTree(fsTree);
     }
 
 }
