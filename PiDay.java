@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class PiDay {
-    public static final int loops = 3000;
+    public static final int loops = 2500000;
 
     static int factorialItr(int n) {
         int result = 1;
@@ -46,7 +46,7 @@ public class PiDay {
     static double piItr() {
         double pi = 3.0;
         double four = 4.0;
-        for(int n = 2; n <= loops; n += 2) {
+        for(long n = 2; n <= loops; n += 2) {
             pi += four/(n*(n+1)*(n+2));
             four *= -1;
         }
@@ -54,7 +54,8 @@ public class PiDay {
     }
 
     static double converge(int n, boolean subtract) {
-        double out = 4.0/(n*(n+1)*(n+2));
+        long n2 = n;
+        double out = 4.0/(n2*(n2+1)*(n2+2));
         if(subtract)
             out *= -1;
         if(n >= loops) {
@@ -90,10 +91,10 @@ public class PiDay {
         // System.out.println("fibonacci(10) = " + fibonacci(1000));
         // System.out.println(reverseString("testing"));
 
-        // System.out.println("Pi:  3.14159265358979323846264338327950288419716939937510");
-        // System.out.println("Itr: " + piItr());
+        System.out.println("Pi:  3.14159265358979323846264338327950288419716939937510");
+        System.out.println("Itr: " + piItr());
         // System.out.println("Rec: " + piRec());
 
-        System.out.println(power(2, 16));
+        // System.out.println(power(2, 16));
     }
 }

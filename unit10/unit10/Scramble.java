@@ -1,5 +1,6 @@
 package unit10;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Scramble {
@@ -74,12 +75,21 @@ public class Scramble {
     }
 
     /**
-     * TODO how does this function work?
+     * Randomly shuffles the order of an integer array.
      * 
      * @param arr array of integers to shuffle
      */
     public static void shuffle(int arr[]) {
-        // TODO
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        int len = arr.length;
+        for(int i : arr) {
+            int pos = (int) Math.round(Math.random() * list.size());
+            System.out.println(Math.max(Math.min(pos, list.size()-1), 0));
+            list.add(Math.max(Math.min(pos, list.size()-1), 0), i);
+        }
+        for(int i = 0; i < len; i++) {
+            arr[i] = list.get(i);
+        }
     }
 
     public static void main(String args[]) {
