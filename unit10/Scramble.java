@@ -78,32 +78,22 @@ public class Scramble {
      * @param arr array of integers to shuffle
      */
     public static void shuffle(int arr[]) {
-        int[] shuffled = arr.arraycopy(arr, );
-        int len = shuffled.length;
+        int len = arr.length;
         for(int i = 0; i < len; i++) {
             int newPos = (int) Math.floor(Math.random() * len);
-            shuffled[i] = arr[newPos];
-            shuffled[newPos] = arr[i];
+            int temp = arr[i];
+            arr[i] = arr[newPos];
+            arr[newPos] = temp;
         }
-        // ArrayList<Integer> list = new ArrayList<Integer>();
-        // int len = arr.length;
-        // for(int i : arr) {
-        //     int pos = (int) Math.round(Math.random() * list.size());
-        //     System.out.println(Math.max(Math.min(pos, list.size()-1), 0));
-        //     list.add(Math.max(Math.min(pos, list.size()-1), 0), i);
-        // }
-        // for(int i = 0; i < len; i++) {
-        //     arr[i] = list.get(i);
-        // }
     }
 
     public static void main(String args[]) {
 
-        int[] arr1 = { 6, 5, 3, 1, 8, 7, 2, 4 };
+        int[] arr1 = { 6, 5, 3, 1, 8, 7, 2, 4, 9 };
         insertionSort(arr1);
         System.out.println("Insertion sorted: " + Arrays.toString(arr1));
 
-        int[] arr2 = { 3, 7, 8, 5, 2, 1, 9, 5, 4 };
+        int[] arr2 = { 3, 7, 8, 5, 2, 1, 9, 6, 4 };
         selectionSort(arr2);
         System.out.println("Selection sorted: " + Arrays.toString(arr2));
 
