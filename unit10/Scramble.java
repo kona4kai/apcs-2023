@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -80,16 +78,23 @@ public class Scramble {
      * @param arr array of integers to shuffle
      */
     public static void shuffle(int arr[]) {
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        int len = arr.length;
-        for(int i : arr) {
-            int pos = (int) Math.round(Math.random() * list.size());
-            System.out.println(Math.max(Math.min(pos, list.size()-1), 0));
-            list.add(Math.max(Math.min(pos, list.size()-1), 0), i);
-        }
+        int[] shuffled = arr.arraycopy(arr, );
+        int len = shuffled.length;
         for(int i = 0; i < len; i++) {
-            arr[i] = list.get(i);
+            int newPos = (int) Math.floor(Math.random() * len);
+            shuffled[i] = arr[newPos];
+            shuffled[newPos] = arr[i];
         }
+        // ArrayList<Integer> list = new ArrayList<Integer>();
+        // int len = arr.length;
+        // for(int i : arr) {
+        //     int pos = (int) Math.round(Math.random() * list.size());
+        //     System.out.println(Math.max(Math.min(pos, list.size()-1), 0));
+        //     list.add(Math.max(Math.min(pos, list.size()-1), 0), i);
+        // }
+        // for(int i = 0; i < len; i++) {
+        //     arr[i] = list.get(i);
+        // }
     }
 
     public static void main(String args[]) {

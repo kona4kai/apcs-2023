@@ -1,14 +1,20 @@
-package unit10;
+
 
 public class Recur {
 
     public static int fun3(int n) {
-        if (n == 0)
+        System.out.println("called fun3(" + n + ")");
+        if (n == 0) {
+            System.out.println("returned 1");
             return 1;
-        else
+        }
+        else {
+            System.out.println("returned 3 * fun3(" + (n-1) + ")");
             return 3 * fun3(n - 1);
+        }
     }
 
+    // f(3) = f(2) + f(1) = f(1) + f(0) + f(1) = 2
     public static int f(int n) {
         if (n == 0)
             return 0;
@@ -62,7 +68,7 @@ public class Recur {
     public static void main(String[] args) {
 
         // Consider function fun3
-        // System.out.println(fun3(5));
+        System.out.println(fun3(5));
 
         // Consider function f
         // System.out.println(f(6));
