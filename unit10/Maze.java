@@ -1,5 +1,3 @@
-package unit10;
-
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
@@ -15,8 +13,10 @@ public class Maze {
      * @param line the values to be placed in the maze.
      */
     public Maze(int rows, int cols, String line) {
-        // TODO part a
-
+        this.maze = new char[rows][cols];
+        for(int i = 0; i < rows*cols; i++) {
+            this.maze[i/cols][i%cols] = line.charAt(i);
+        }
     }
 
     /**
@@ -53,8 +53,17 @@ public class Maze {
      * @param c current column index
      */
     private void check(int r, int c) {
-        // TODO part b
-
+        if(r >= 0 && c >= 0 && maze.length > r && maze.length > c && maze[r][c] != '#' && maze[r][c] != '!') {
+            if(maze[r][c] == '$') {
+                this.solution = true;
+            } else {
+                maze[r][c] = '!';
+                check(r-1, c);
+                check(r+1, c);
+                check(r, c-1);
+                check(r, c+1);
+            }
+        }
     }
 
     /**
@@ -63,9 +72,20 @@ public class Maze {
      * @return true if the maze has a path from Start (@) to End ($).
      */
     public boolean hasSolution() {
-        // TODO part c
-        return false; // replace me!
+        String start = getStart();
+        check(start.charAt(0), (int)start.charAt(0)); // TODO fix wrong input values
 
+        int rows = maze.length;
+        int columns = maze[0].length;
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < columns; j++) {
+                if(this.maze[i][i] == '!')
+                    this.maze[i][i] = '.';
+            }
+        }
+        
+        System.out.println("This maze has a solution: " + this.solution);
+        return this.solution;
     }
 
     // HINT overriding toString may be handy. :)
