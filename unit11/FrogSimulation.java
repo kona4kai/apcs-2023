@@ -54,7 +54,12 @@ public class FrogSimulation {
      * false otherwise.
      */
     public boolean simulate() {
-        /* to be implemented in part (a) */
+        int pos = 0;
+        for(int hops = 1; hops <= maxHops && pos >=0; hops++) {
+            pos += hopDistance();
+            if(pos >= goalDistance)
+                return true;
+        }
         return false; // replace me!
     }
 
@@ -65,8 +70,12 @@ public class FrogSimulation {
      * Precondition: num > 0
      */
     public double runSimulations(int num) {
-        /* to be implemented in part (b) */
-        return -1; // replace me!
+        int pass = 0;
+        for(int i = 1; i <= num; i++) {
+            if(simulate())
+                pass++;
+        }
+        return 1.0*pass/num;
     }
 
     public static void check(boolean test) throws AssertionError {
