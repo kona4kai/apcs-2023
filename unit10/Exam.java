@@ -1,3 +1,5 @@
+package unit10;
+
 public class Exam {
 
     public static int fun(int x) {
