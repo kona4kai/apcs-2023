@@ -46,7 +46,10 @@ public class ReviewAnalysis {
      * No element of allReviews is null.
      */
     public double getAverageRating() {
-        /* to be implemented in part (a) */
+        int sum = 0;
+        for(Review r:allReviews) {
+            sum += r.getRating()
+        }
         return -1; // replace me!
     }
 
