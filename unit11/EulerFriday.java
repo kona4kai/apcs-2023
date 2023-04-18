@@ -1,4 +1,5 @@
 package unit11;
+import unit10.Recur;
 
 public class EulerFriday {
 
@@ -7,12 +8,66 @@ public class EulerFriday {
         // 1
         int sum = 0;
         for (int i = 0; i < 1000; i++) {
-
+            if(i%3 == 0 || i%5 == 0)
+                sum += i;
+        }
+        System.out.println(sum);
+    
+        // 2
+        sum = 2;
+        int a = 1;
+        int b = 2;
+        while(b < 4000000) {
+            int temp = b;
+            b = a + b;
+            a = temp;
+            if(b%2 == 0)
+                sum += b;
         }
         System.out.println(sum);
 
-        // 2
+        // 3
+        //not able to get recursive function working in a timely manor.
+        long factorMe = 600851475143l;
+        long factor = 2l;
+        long largestFactor = 1l;
+        while(factor <= factorMe) {
+            while(factorMe%factor == 0) {
+                largestFactor = factor;
+                factorMe /= factor;
+            }
+            factor += 1;
+        }
+        System.out.println(largestFactor);
 
+        // 4
+        int largestPal = -1;
+        for(int i = 100; i < 1000; i++) {
+            for(int j = i; j < 1000; j++) {
+                int product = i*j;
+                String s = Integer.toString(product);
+                if(Recur.pot(s)) {
+                    if((int)product > largestPal) {
+                        largestPal = product;
+                    }
+                }
+            }
+        }
+        System.out.println(largestPal);
+
+        // 5
+        int low = 1;
+        for(int i = 2; i <= 20; i++) {
+            if(LCM(low, i) > low)
+                low = LCM(low, i);
+        }
+        System.out.println(low);
+        // for(int i = 2; i <= 20; i++) {
+        //     if(low%i != 0) {
+        //         System.out.println("no");
+        //     }
+        // }
+        // System.out.println(low);
     }
 
     static int[] prob8scaffold() {
@@ -49,4 +104,14 @@ public class EulerFriday {
         return nums;
     }
 
+    public static int GCD(int a, int b) {
+        if(a%b == 0){
+            return b;
+        }
+        return GCD(b, a%b);
+    }
+
+    public static int LCM(int a, int b) {
+        return (a*b) / GCD(a, b);
+    }
 }
