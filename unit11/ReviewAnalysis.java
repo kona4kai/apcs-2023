@@ -48,9 +48,9 @@ public class ReviewAnalysis {
     public double getAverageRating() {
         int sum = 0;
         for(Review r:allReviews) {
-            sum += r.getRating()
+            sum += r.getRating();
         }
-        return -1; // replace me!
+        return (double)sum/allReviews.length;
     }
 
     /**
@@ -61,8 +61,13 @@ public class ReviewAnalysis {
      * Postcondition: allReviews is unchanged.
      */
     public ArrayList<String> collectComments() {
-        /* to be implemented in part (b) */
-        return null; // replace me!
+        ArrayList<String> comments = new ArrayList<String>();
+        for(int i = 0; i < allReviews.length; i++) {
+            if(allReviews[i].getComment().indexOf("!") != -1) {
+                comments.add(i + "-" + allReviews[i].getComment());
+            }
+        }
+        return comments;
     }
 
     public static void check(boolean test) throws AssertionError {
