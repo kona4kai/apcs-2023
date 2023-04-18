@@ -6,9 +6,12 @@ import java.util.Arrays;
 
 public class ArrayResizer {
     public static boolean isNonZeroRow(int[][] array2D, int r) {
-        // TODO part a
-
-        return false; // replace me
+        int[] row = array2D[r];
+        for(int i = 0; i < row.length; i++) {
+            if(row[i] == 0)
+                return false;
+        }
+        return true;
     }
 
     public static int numNonZeroRows(int[][] array2D) {
@@ -22,9 +25,15 @@ public class ArrayResizer {
     }
 
     public static int[][] resize(int[][] array2D) {
-        // TODO part b
-
-        return null; // replace me
+        int[][] small = new int[numNonZeroRows(array2D)][0];
+        int sI = 0;
+        for(int i = 0; i < array2D.length; i++) {
+            if(isNonZeroRow(array2D, i)) {
+                small[sI] = array2D[i];
+                sI++;
+            }
+        }
+        return small;
     }
 
     public static void check(boolean test) throws AssertionError {
