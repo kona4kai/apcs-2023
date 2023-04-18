@@ -21,8 +21,13 @@ public class Data {
      * grid has at least one element.
      */
     public void repopulate() {
-        /* TODO to be implemented in part (a) */
-
+        for(int[] r:grid) {
+            for(int c:r) {
+                while(c%100 != 0) {
+                    c = ((int) Math.random()*((MAX+1)/10))*10;
+                }
+            }
+        }
     }
 
     /**
@@ -33,9 +38,21 @@ public class Data {
      * grid has at least one element.
      */
     public int countIncreasingCols() {
-        /* TODO to be implemented in part (b) */
-
-        return -1; // replace me!
+        int count = 0;
+        for(int c = 0; c < grid[0].length; c++) {
+            int current = 0;
+            for(int r = 0; r < grid.length && current != -1; r++) {
+                if(grid[r][c] >= current) {
+                    current = grid[r][c];
+                } else {
+                    current = -1;
+                }
+            }
+            if(current != -1) {
+                count++;
+            }
+        }
+        return count;
     }
 
     // There may be instance variables, constructors, and methods that are not
