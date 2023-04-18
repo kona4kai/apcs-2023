@@ -63,8 +63,15 @@ public class ReviewAnalysis {
     public ArrayList<String> collectComments() {
         ArrayList<String> comments = new ArrayList<String>();
         for(int i = 0; i < allReviews.length; i++) {
-            if(allReviews[i].getComment().indexOf("!") != -1) {
-                comments.add(i + "-" + allReviews[i].getComment());
+            String comment = allReviews[i].getComment();
+            if(comment.indexOf("!") != -1) {
+                String last = comment.substring(comment.length()-1);
+                if(last.equals(".") || last.equals("!")) {
+                    comments.add(i + "-" + allReviews[i].getComment());
+                } else {
+                    comments.add(i + "-" + allReviews[i].getComment() + ".");
+                }
+                
             }
         }
         return comments;
