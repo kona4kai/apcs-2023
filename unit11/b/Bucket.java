@@ -31,7 +31,9 @@ public class Bucket {
     }
 
     // what does static mean?
+    // static means the method is non-specific to an instance of a class.
     // what is by value vs. by reference?
+    // by value updates a value specific to a method and by reference updates a variable based on its storage location.
 
     static void updateValue(int value) {
         value = 5;
@@ -46,6 +48,7 @@ public class Bucket {
         // System.out.println("Within method:");
         // updateValue(value);
         // System.out.println(value);
+        // should be 3
 
         // System.out.println("Within bucket:");
         // Bucket b = new Bucket(value);
@@ -53,5 +56,6 @@ public class Bucket {
         // updateValue(valueBucket);
         // updateValueDirect(b);
         // System.out.println(b.getValue());
+        // should be 5
     }
 }
