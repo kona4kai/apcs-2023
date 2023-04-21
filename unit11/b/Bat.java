@@ -19,6 +19,7 @@ public class Bat {
     }
 
     // what is the output of conditionalTest(3,-2)?
+    // C!
     // how much of this function do we need to inspect?
 
     private int[] arr;
@@ -38,16 +39,18 @@ public class Bat {
         // System.out.println(s2);
     }
     // what does mystery() do to s1?
+    // sums even numbers greater than zero.
 
     public static void main(String[] args) {
         // why do we need to instantiate a Bat?
+        // the methods are not static
         Bat b = new Bat();
-        // b.conditionalTest(3, -2);
+        b.conditionalTest(3, -2);
 
         // invent an array
-        // int arr[] = { -9, 7, 2, -8, 6, 5, 1 };
-        // b.arr = arr;
-        // b.mystery();
+        int arr[] = { -9, 7, 2, -8, 6, 5, 1 };
+        b.arr = arr;
+        b.mystery();
     }
 
 }
