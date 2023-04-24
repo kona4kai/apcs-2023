@@ -7,16 +7,24 @@ public class Bird {
 
         String s = "turkey";
         // predict before uncommenting
-        // System.out.println(s.substring(1, 4));
+        System.out.println(s.substring(1, 4));
+        // prints urk
 
         String t = new String("turkey");
-        // System.out.println(s == t);
+        System.out.println(s == t);
+        // false
+        System.out.println("turkey" == s);
+        // true <-- both s and "turkey" are from the String pool. t is not.
+        System.out.println(t == "turkey");
+        // false
 
         int x = 3 % 7;
-        // System.out.println(x);
+        System.out.println(x);
+        // 3
 
         String w = "ans: " + 4 + 5;
-        // System.out.println(w);
+        System.out.println(w);
+        // ans: 45
 
         int num1 = 0;
         int num2 = 3;
