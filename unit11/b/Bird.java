@@ -33,10 +33,12 @@ public class Bird {
             num2 = num2 - 1;
         }
         // predict before uncommenting
-        // System.out.println(num1 + ", " + num2);
+        System.out.println(num1 + ", " + num2);
+        // 6 0
 
         // what will recur do?
         // recur(7);
+        // stack overflow error
     }
 
     private static void recur(int n) {
@@ -49,8 +51,12 @@ public class Bird {
     // precondition: arr is not empty, and may have negative values
     // https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-negative-number-topic/x0267d782:ordering-rational-numbers/a/ordering-negative-numbers
     private int smallest(int[] arr, int n) {
-        // return smallest value in arr less than n
-        // what is the smallest integer?
+        int smallest = Integer.MAX_VALUE;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] < n && arr[i] < smallest) {
+                smallest = arr[i];
+            }
+        }
         return n; // replace me
     }
 }

@@ -10,12 +10,12 @@ public class Boo {
     }
 
     public static boolean is2True(boolean a, boolean b) {
-        return a && b;
-        // return !a && !b;
-        // return !(a || b);
-        // return !(a && b);
-        // return !(a != b) || a && !b;
-        // return (a || b) && !(a && b);
+        // return a && b;       // true when both are true
+        // return !a && !b;     // true when both are false
+        // return !(a || b);    // false when either is false or true when both are false
+        // return !(a && b);    // false when both are true or true when either is true
+        // return !(a != b) || a && !b;     // false when a is false and b is true
+        return (a || b) && !(a && b);       // true when both are different
     }
 
     public static boolean is3True(boolean a, boolean b, boolean c) {
