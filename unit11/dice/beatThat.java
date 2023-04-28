@@ -1,7 +1,7 @@
 package unit11.dice;
 import java.util.Scanner;
 
-public class beatThat {
+public class BeatThat {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
