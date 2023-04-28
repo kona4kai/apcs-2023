@@ -2,6 +2,7 @@
 
 - Sorting types/speeds
 - encapsulation
-- demorgan law
+- De Morgans' laws
 - boolean order of operations
-- 
+- Reasons for using an inheritance heirarchy
+- Immutability of Strings (and other types?)
