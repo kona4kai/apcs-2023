@@ -75,6 +75,62 @@ public class Recur {
         return 4 + mystery(x - 1);
     }
 
+    /**
+     * Sorts the String array using the Merge Sort algorithm.
+     * Modified code from https://www.baeldung.com/java-merge-sort
+     * 
+     * @param arr the array to sort
+     */
+    public static void mergeSort(String[] arr) {
+        int n = arr.length;
+        // base case: no need to sort a single element (or empty) array
+        if (n < 2) {
+            return;
+        }
+        // split the array to sort recursively.
+        int mid = n / 2;
+        String[] l = new String[mid];
+        String[] r = new String[n - mid];
+
+        for (int i = 0; i < mid; i++) {
+            l[i] = arr[i];
+        }
+        for (int i = mid; i < n; i++) {
+            r[i - mid] = arr[i];
+        }
+        mergeSort(l);
+        mergeSort(r);
+
+        // MERGE
+        int left = mid;
+        int right = n - mid;
+        // pointers for left array (i), right array (j), and combined array (k)
+        int i = 0, j = 0, k = 0;
+        while (i < left && j < right) {
+            boolean leftLess = false;
+            boolean loop = true;
+            for(int index = 0; index < l[i].length() && loop; index++) {
+                if(l[i].charAt(index) < r[j].charAt(index)) {
+                    leftLess = true;
+                } else if(l[i].charAt(index) == r[j].charAt(index)) {
+                    loop = false;
+                }
+            }
+            if (leftLess) {
+                arr[k++] = l[i++];
+            } else {
+                arr[k++] = r[j++];
+            }
+        }
+        // if we finish one array, complete the other
+        while (i < left) {
+            arr[k++] = l[i++];
+        }
+        while (j < right) {
+            arr[k++] = r[j++];
+        }
+    }
+
     public static void main(String[] args) {
 
         // Consider function fun3
