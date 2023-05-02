@@ -27,6 +27,10 @@ class WordPair {
     public String getSecond() {
         return this.second;
         /* implementation not shown */ }
+    
+    public String toString() {
+        return "(" + this.first + ", " + this.second + ")";
+    }
 
 }
 
