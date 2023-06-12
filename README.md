@@ -4,18 +4,40 @@ Anacortes High School - AP Computer Science A - Spring 2023 Course Materials
 
 ## Homework 👩‍💻👨‍💻
 
-- Due Monday, May 8, before class: [Data Ethics](unit12/12-1.md#homework): 📜 Essay or Conversation
+- Due Monday, June 12: All outstanding work you wish to receive credit for.
+- Due Monday, June 5: [Project Package 🎁](unit12/12-16.md#project-rubric)
+
+## Unit 13 🧑‍🏫
+
+- Monday, June 12: Lesson 13-5 [Course Retrospective](unit13/13-5.md)
+- Friday, June 9: Lesson 13-4 [Project Demos](unit13/13-4.md)
+- Thursday, June 8: Lesson 13-3 [Project Demos](unit13/13-3.md)
+- Tuesday, June 6: Lesson 13-2 [Time Machine](unit13/13-2.md)
+- Monday, June 5: Lesson 13-1 [Course Conclusion](unit13/13-1.md)
 
 ## Unit 12 🧑‍🏫
 
+- Friday, June 2: Lesson 12-16 [Project Package](unit12/12-16.md)
+- Thursday, June 1: Lesson 12-15 [Project Polish](unit12/12-15.md)
+- Friday, May 26: Lesson 12-14 [Project Plans](unit12/12-14.md)
+- Thursday, May 25: Lesson 12-13 [Progress Projects](unit12/12-13.md)
+- Tuesday, May 23: Lesson 12-12 [Prompting AI](unit12/12-12.md)
+- Monday, May 22: Lesson 12-11 [Project Progress Check](unit12/12-11.md)
+- Friday, May 19: Lesson 12-10 [Project Work; webapp scaffold](unit12/12-10.md)
+- Thursday, May 18: Lesson 12-9 [Project Work, plus Internet](unit12/12-9.md)
+- Tuesday, May 16: Lesson 12-8 [Project Work](unit12/12-8.md)
+- Monday, May 15: Lesson 12-7 [Project Proposals 🌞](unit12/12-7.md)
+- Friday, May 12: Lesson 12-6 [Projects 🚧](unit12/12-6.md)
 - Thursday, May 11: Lesson 12-5 [Beyond Data❓](unit12/12-5.md)
 - Tuesday, May 9: Lesson 12-4 [Exploring Data](unit12/12-4.md)
 - Monday, May 8: Lesson 12-3 [Collecting Data](unit12/12-3.md)
 - Friday, May 5 🌮: Lesson 12-2 [From Java to Python 🐍](unit12/12-2.md)
 - Thursday, May 4 🌌: Lesson 12-1 [Beyond Java](unit12/12-1.md)
 
-## Homework, Units 10 & 11 👩‍💻👨‍💻
+## Homework, Units 10, 11, & 12 👩‍💻👨‍💻
 
+- Due Monday, May 15, by period end: [Project Proposal](unit12/12-6.md#homework)
+- Due Monday, May 8, before class: [Data Ethics](unit12/12-1.md#homework): 📜 Essay or Conversation
 - Due Wednesday, May 3, before exam: [csawesome's 11.1 Post Test](unit11/11-11.md#homework)
 - Due Monday, April 24, before class: [Code-a-FRQ](unit11/11-9.md#homework): Crossword, or alternative
 - Due Thursday, April 20, before class: [Boot Camp Drills](unit11/11-7.md#homework): choose two!
